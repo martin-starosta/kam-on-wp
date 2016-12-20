@@ -8,7 +8,6 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/uploads/
 wp-content/wp-cache-config.php
-wp-content/plugins/hello.php
 
 /.htaccess
 /license.txt
@@ -16,3 +15,34 @@ wp-content/plugins/hello.php
 /sitemap.xml
 /sitemap.xml.gz
 
+.idea/
+cd
+index.php
+wp-activate.php
+wp-admin/
+wp-blog-header.php
+wp-comments-post.php
+wp-config-sample.php
+wp-cron.php
+wp-includes/
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+/wp-content/themes/eighties/
+/wp-content/themes/freedom/
+/wp-content/themes/refur/
+/wp-content/themes/adamos/
+/wp-content/themes/kamforum/
+/wp-content/themes/twentysixteen/
+/wp-content/themes/twentyfourteen/
+/wp-content/themes/twentyfifteen/
+/wp-content/plugins/akismet/
+/wp-content/plugins/rest-api/
+/wp-content/plugins/rewrite-rules-inspector/
+/wp-content/plugins/gmail-smtp/
+/wp-content/plugins/hello.php
