@@ -8,7 +8,8 @@
  *
  * @package refur
  */
-
+ 
+ $version = filemtime( get_stylesheet_directory() . '/css/kam-forum.css');
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -25,7 +26,7 @@
 
   <?php wp_head(); ?>
   <link rel="stylesheet"
-        href="<?= bloginfo( 'stylesheet_directory' ); ?>/css/kam-forum.css" />
+        href="<?= bloginfo( 'stylesheet_directory' ); ?>/css/kam-forum.css<?= "?ver=$version" ?>" />
 </head>
 
 <body <?php body_class(); ?>>
