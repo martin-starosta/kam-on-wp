@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Refur\n"
 "POT-Creation-Date: 2017-01-02 09:26+0100\n"
-"PO-Revision-Date: 2017-01-02 09:46+0100\n"
+"PO-Revision-Date: 2017-01-02 14:20+0100\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,16 +54,16 @@ msgstr ""
 
 #: comments.php:83
 msgid "Comment*"
-msgstr "Komentár*"
+msgstr "Sem napíš svoj komentár*"
 
 #: comments.php:84
 msgid "Leave a Reply"
-msgstr "Pridajte komentár k článku"
+msgstr "Pridaj komentár k príspevku"
 
 #: comments.php:85
 #, php-format
 msgid "Leave a Reply to %s"
-msgstr "Pridajte komentár pre %s"
+msgstr "Pridaj komentár pre %s"
 
 #: footer.php:33
 msgid "https://wordpress.org/"
@@ -291,7 +291,7 @@ msgstr ""
 
 #: inc/extras.php:254
 msgid "Name"
-msgstr "MNňeno"
+msgstr "Meno"
 
 #: inc/extras.php:255
 msgid "Email"
@@ -303,7 +303,7 @@ msgstr ""
 
 #: inc/template-tags.php:90 inc/template-tags.php:179
 msgid "Leave a comment"
-msgstr "Pridajte komentár k článku"
+msgstr "Pridaj komentár k príspevku"
 
 #: inc/template-tags.php:90 inc/template-tags.php:179
 msgid "1 Comment"

@@ -52,6 +52,10 @@
 / Overrides
 / -------------------------------------------------- **/
 
+.site-content {
+    padding: 32px 0 32px;
+}
+
 
 /**
  * 1. Avoid the IE 10-11 `min-height` bug.
@@ -72,7 +76,7 @@
 }
 
 .header-showcase {
-    max-height: 80vh;
+    max-height: 65vh;
 }
 
 
@@ -95,9 +99,90 @@
 
 
 /** --------------------------------------------------
+/ Cards
+/ -------------------------------------------------- **/
+
+.promoted-headline {
+    font-size: 16pt;
+    letter-spacing: 0;
+    font-weight: 350;
+    font-style: normal;
+}
+
+.card {
+    border: 1px solid rgba(70, 76, 81, .15);
+    border-radius: 1px;
+    color: rgb(70, 76, 81);
+    margin-bottom: 16pt;
+    padding: 16pt;
+}
+
+
+/** --------------------------------------------------
 / Text colors
 / -------------------------------------------------- **/
 
 .text-red {
     color: #CD241B;
+}
+
+
+/** --------------------------------------------------
+/ Buttons
+/ source: https://www.sitepoint.com/modern-css-buttons/
+/ -------------------------------------------------- **/
+
+.variation-a,
+.variation-b {
+    /*text-align: center;*/
+}
+
+.suit_and_tie {
+    /* font */
+    color: rgb(117, 163, 209);
+    text-decoration: none;
+    /* border */
+    border: 2px solid rgb(117, 163, 209);
+    border-radius: 20px;
+    /* transitions */
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    /* other */
+    background-color: white;
+    padding: 8px 16px;
+}
+
+.suit_and_tie:hover {
+    /* update text color and background color */
+    color: white;
+    background-color: rgb(117, 163, 209);
+    text-decoration: none;
+    /* transitions */
+    transition-duration: .2s;
+    -webkit-transition-duration: .11s;
+    -moz-transition-duration: .2s;
+}
+
+.variation-b .suit_and_tie {
+    /* font */
+    color: white;
+    /* border */
+    border: 2px solid white;
+    /* other */
+    background-color: rgb(117, 163, 209);
+}
+
+.variation-b .suit_and_tie:hover {
+    /* font */
+    color: rgb(117, 163, 209);
+    /* border */
+    border: 2px solid rgb(117, 163, 209);
+    /* other */
+    background-color: white;
+}
+
+button.suit_and_tie {
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
