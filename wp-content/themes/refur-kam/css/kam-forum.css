@@ -113,6 +113,7 @@
     border: 1px solid rgba(70, 76, 81, .15);
     border-radius: 1px;
     color: rgb(70, 76, 81);
+    height: 100%;
     margin-bottom: 16pt;
     padding: 16pt;
 }
@@ -141,6 +142,7 @@
     /* font */
     color: rgb(117, 163, 209);
     text-decoration: none;
+    text-transform: none;
     /* border */
     border: 2px solid rgb(117, 163, 209);
     border-radius: 20px;
@@ -157,6 +159,7 @@
     /* update text color and background color */
     color: white;
     background-color: rgb(117, 163, 209);
+    border: 2px solid rgb(117, 163, 209);
     text-decoration: none;
     /* transitions */
     transition-duration: .2s;
@@ -185,4 +188,8 @@
 button.suit_and_tie {
     -webkit-appearance: none;
     -moz-appearance: none;
+}
+
+.search-row {
+    margin-bottom: 16px;
 }

@@ -236,6 +236,28 @@ function refur_get_option($name, $default = FALSE) {
 }
 
 /**
+*
+*/
+function refur_search_form( $form = '' )
+{
+  $form = '
+    <form class="form-inline" role="search" method="get" id="searchform" action="' . home_url( '/' ) . '" >
+      <div class="form-group pull-right">
+        <label for="s">' . __('Search') . ':</label>
+        <input class="form-control" type="text" value="' . get_search_query() . '" name="s" id="s" />&nbsp;
+        <span class="variation-a">
+          <button class="suit_and_tie" type="submit" id="searchsubmit" title="' . esc_attr__('Search') . '">
+            <i class="fa fa-search" aria-hidden="true"></i> 
+          </a>
+        </span>  
+      </div>
+    </form>';
+
+    return $form;
+
+}
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
