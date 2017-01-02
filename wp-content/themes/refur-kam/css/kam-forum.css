@@ -74,3 +74,30 @@
 .header-showcase {
     max-height: 80vh;
 }
+
+
+/** --------------------------------------------------
+/ Premium
+/ -------------------------------------------------- **/
+
+.premium {}
+
+.premium .separator {
+    border-top: 1px dashed #CD241B;
+    border-bottom: 1px dashed #CD241B;
+    margin-bottom: 8pt;
+    text-align: center;
+}
+
+.premium .premium-headline {
+    font-weight: bold;
+}
+
+
+/** --------------------------------------------------
+/ Text colors
+/ -------------------------------------------------- **/
+
+.text-red {
+    color: #CD241B;
+}
