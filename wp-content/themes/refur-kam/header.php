@@ -30,6 +30,12 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php if(WP_ENV === "production"): ?>
+  <!-- Include Google Analytics Tracking code -->
+  <?php include_once("analyticstracking.php") ?>
+<?php endif; ?>
+
 <?php do_action('refur_page_before'); ?>
 <div id="page" class="hfeed site flex-site">
   <a class="skip-link screen-reader-text"
