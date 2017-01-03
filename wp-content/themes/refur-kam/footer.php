@@ -38,6 +38,17 @@
 			</div>
 		</div>
 	</footer><!-- #colophon -->
+
+	<div class="cookie-notice bg-grey">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 text-center small text-white">
+					Tento web používa súbory cookies. Prehliadaním webu vyjadrujete súhlas s ich používaním. <a class="text-white" href="<?= get_site_url( ); ?>/subory-cookies/">Viac informácií</a>.
+				</div>
+			</div>
+		</div>
+	</div><!-- .cookie-notice -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

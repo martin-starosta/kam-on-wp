@@ -127,6 +127,29 @@
     color: #CD241B;
 }
 
+.text-white,
+.text-white:hover {
+    color: rgb(191, 223, 236);
+}
+
+a.text-white {
+    color: rgb(144, 189, 212);
+    text-decoration: underline;
+}
+
+
+/** --------------------------------------------------
+/ Backgrounds
+/ -------------------------------------------------- **/
+
+.bg-red {
+    background-color: #CD241B;
+}
+
+.bg-grey {
+    background-color: rgba(70, 76, 81, .8);
+}
+
 
 /** --------------------------------------------------
 / Buttons
