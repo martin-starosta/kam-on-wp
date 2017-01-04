@@ -257,6 +257,25 @@ function refur_search_form( $form = '' )
 
 }
 
+function refur_submit_registration() {
+  $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+  $legal = (filter_var($_POST['legal'], FILTER_SANITIZE_STRING) === "on")? true : false;
+  
+  if(strlen($email) > 0 && $legal) {
+    $message = "
+    Ziadosť o registraciu uzivatela na kamforum.sk\r\n
+    \r\n
+    Email: $email\r\n
+    Suhlas s VOP: Áno\r\n
+    \r\n
+    s pozdravom,\r\n
+    kamforum.sk
+    ";
+
+    mail(get_option('admin_email'), 'Ziadost o registraciu uzivatela na kamforum.sk', $message);
+  }
+}
+
 /**
  * Implement the Custom Header feature.
  */

@@ -9,53 +9,57 @@ get_header(); ?>
 
 <div id="primary" class="content-area col-xs-12">
   <main id="main" class="site-main" role="main">
-
-    <article id="registration-form">
+    <?php if($_POST['email']): ?>
+      <?php refur_submit_registration(); ?>
+      <p>
+            Ďakujeme za vyplnenie registračného formulára. Žiadosť bude spracovaná administrátorom fóra do 2 pracovných dní od doručenia
+            žiadosti.
+      </p>
+      <p>
+        V prípade, že tvoja žiadosť bude akceptovaná, obdržíš prihlasovacie meno a heslo na zadanú emailovú adresu.
+      </p>
+    <?php else: ?>
+    <article id="registration">
       <header class="entry-header">
         <?php the_title(sprintf('<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url(get_permalink())), '</a></h1>'); ?>
       </header><!-- .entry-header -->
       <div class="entry-content">
-        <form method="post">
+        <form id="registration-form" method="post">
           <p>
-            Po vyplnení registračného formulára bude Vaša žiadosť spracovaná administrátorom fóra.
-            V prípade, že Vaša žiadosť bude akceptovaná, obdržíte prihlasovacie meno a heslo na
-            Vami zadanú emailovú adresu.
+            Po vyplnení registračného formulára bude tvoja žiadosť spracovaná administrátorom fóra do 2 pracovných dní od doručenia
+            žiadosti.
+            V prípade, že tvoja žiadosť bude akceptovaná, obdržíš prihlasovacie meno a heslo na zadanú emailovú adresu.
           </p>
-          <div class="form-group">
-            <label for="name">Meno</label>
-            <input type="text" class="form-control" id="name"
-                   placeholder="Vaše krstné meno">
-          </div>
 
-          <div class="form-group">
-            <label for="surename">Priezvisko</label>
-            <input type="text" class="form-control" id="surenaname"
-                   placeholder="Vaše priezvisko">
-          </div>
+          <p>
+            Z dôvodu zabezpečenia exkluzivity obsahu KAM Fóra akceptujeme len firmné emailové adresy. Ak takouto emailovou
+            adresou nedisponuješ, ale chceš mať prístup k prémiovému obsahu, kontaktuj nás na info@kamforum.sk. Tvoja žiadosť bude
+            osobitne prehodnotená a budeme ťa informovať o udelení alebo neudelení výnimky.
+          </p>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email"
-                   placeholder="Váš email">
-            <p class="help-block">Akceptujeme emaily len vo formáte identifikátor@nazov-firmy.domena.</p>
+            <input type="email" class="form-control" id="email" name="email"
+                   placeholder="Sem môžeš zadať svoj firemný email.">
           </div>
 
           <div class="checkbox">
             <label>
-              <input type="checkbox"> Súhlasím so správou, spracovaním a
-              uchovaním mojich osobných údajov v KAM Fórum. Poskytnutie údajov je dobrovoľné a bez
-              dôsledkov s tým, že tieto údaje môžu byť spracované pre účely
-              databázy užívateľov fóra v zmysle Zák. č. 428/2002 Zb. o
-              ochrane osobných údajov. Súhlas je daný na dobu neurčitú a podľa §
-              20 ods. 3 cit. zákona je ho možné kedykoľvek písomne odvolať.
+              <input id="legal" type="checkbox" name="legal"> Potvrdzujem, že som sa podrobne oboznámil(-a) a súhlasím s 
+              <a href="<?= get_site_url(); ?>/vseobecne-podmienky-pouzivania/">Všeobecné podmienky používania serveru kamforum.sk</a>. 
+              Ako dotknutá osoba súhlasím týmto so spracúvaním mojich osobných údajov, uvedených vo formulári vyššie, na účely používania tejto služby a ďalších služieb
+              kamforum.sk a za podmienok uvedených v Všeobecné podmienky používania serveru kamforum.sk. 
+              Súhlas udeľujem na dobu neurčitú a som si vedomý, že ho môžem kedykoľvek odvolať.
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">Odoslať registračný formulár</button>
+          <button id="submit-button" type="submit" class="btn btn-primary" disabled="disabled">Odoslať registračný formulár</button>
         </form>
       </div><!-- .entry-content -->
     </article><!-- #post-## -->
+    <?php endif; ?>
 
   </main><!-- #main -->
 </div><!-- #primary -->
 
+<script src="<?= bloginfo( 'stylesheet_directory' ); ?>/js/registration.js" defer ?>//--- Registration Form JS Scripts for KAM Forum --></script>
 <?php get_footer(); ?>

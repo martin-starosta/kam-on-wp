@@ -8,6 +8,7 @@
  *
  * @package refur
  */
+ $version = filemtime( get_stylesheet_directory() . '/js/kam-refur.js');
 
 ?>
 			</div>
@@ -28,6 +29,8 @@
 					$refur_custm_copyright = refur_get_option( 'footer_copyright' );
 					if ( ! empty( $refur_custm_copyright ) ) {
 						echo esc_textarea( $refur_custm_copyright );
+						echo " | <a href='https://mayorsoft.eu' target='_blank'>Mayorsoft.eu</a>";
+						echo " | <a href='" . get_site_url() . "/vseobecne-podmienky-pouzivania'>Všeobecné podmienky používania</a>";
 					} else {
 				?>
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'refur' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'refur' ), 'WordPress' ); ?></a>
@@ -54,7 +57,7 @@
 <?php wp_footer(); ?>
 <!--CDN link for  TweenMax-->
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script src="<?= bloginfo( 'stylesheet_directory' ); ?>/js/kam-refur.js" defer ?>//--- Custom JS Scripts for KAM Forum --></script>
+<script src="<?= bloginfo( 'stylesheet_directory' ); ?>/js/kam-refur.js?<?= "?ver=$version" ?>" defer ?>//--- Custom JS Scripts for KAM Forum --></script>
 
 </body>
 </html>

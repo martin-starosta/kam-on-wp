@@ -52,6 +52,14 @@
 / Overrides
 / -------------------------------------------------- **/
 
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Roboto", sans-serif;
+}
+
 .site-content {
     padding: 32px 0 32px;
 }
