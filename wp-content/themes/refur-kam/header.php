@@ -8,7 +8,8 @@
  *
  * @package refur
  */
-
+ 
+ $version = filemtime( get_stylesheet_directory() . '/css/kam-forum.css');
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
@@ -25,10 +26,17 @@
 
   <?php wp_head(); ?>
   <link rel="stylesheet"
-        href="<?= bloginfo( 'stylesheet_directory' ); ?>/css/kam-forum.css" />
+        href="<?= bloginfo( 'stylesheet_directory' ); ?>/css/kam-forum.css<?= "?ver=$version" ?>" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&amp;subset=latin-ext" rel="stylesheet">      
 </head>
 
 <body <?php body_class(); ?>>
+
+<?php if(WP_ENV === "production"): ?>
+  <!-- Include Google Analytics Tracking code -->
+  <?php include_once("analyticstracking.php") ?>
+<?php endif; ?>
+
 <?php do_action('refur_page_before'); ?>
 <div id="page" class="hfeed site flex-site">
   <a class="skip-link screen-reader-text"

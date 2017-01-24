@@ -28,10 +28,8 @@
     <?php else: ?>
       <?php the_excerpt(); ?>
 
-      <p class="only-premium-text">
-        <span class="text-red">Pokračovanie článku patrí k prémiovému obsahu KAM fora.</span><br>
-        Pre pokracovanie sa prosim <a href="<?= bloginfo('url') ?>/wp-login.php">prihlaste</a>, alebo sa môžete byť jeho predplatiteľom
-      </p>
+      <!-- Load premium notice fragment -->
+      <?php get_template_part( 'fragments/fragment', 'premium-notice' ); ?>
 
     <?php endif; ?>
 
