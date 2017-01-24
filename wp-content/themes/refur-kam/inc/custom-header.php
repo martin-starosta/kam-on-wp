@@ -241,22 +241,28 @@ class refur_custom_header {
 		?>
 		<div class="header-showcase_content">
 			<div class="container">
-				<?php if ( $title || $text ) : ?>
-				<div class="header-showcase_slogan">
-					<?php if ( $title ) : ?>
-					<div class="header-showcase_title"><?php
-						echo wp_kses( $title, wp_kses_allowed_html( 'post' ) );
-					?></div>
-					<?php endif; ?>
-					<?php if ( $text ) : ?>
-					<div class="header-showcase_text"><?php
-						echo wp_kses( $text, wp_kses_allowed_html( 'post' ) );
-					?></div>
-					<?php endif; ?>
-				</div>
-				<?php endif; ?>
-				<?php $this->show_button(); ?>
-			</div>
+				<div class="row">
+					<div class="header-showcase_main col-lg-8">
+						<?php if ( $title || $text ) : ?>
+						<div class="header-showcase_slogan">
+							<?php if ( $title ) : ?>
+							<div class="header-showcase_title"><?php
+								echo wp_kses( $title, wp_kses_allowed_html( 'post' ) );
+							?></div>
+							<?php endif; ?>
+							<?php if ( $text ) : ?>
+							<div class="header-showcase_text"><?php
+								echo wp_kses( $text, wp_kses_allowed_html( 'post' ) );
+							?></div>
+							<?php endif; ?>
+						</div>
+						<?php endif; ?>
+					</div><!-- .header-showcase_main -->
+					<div class="header-showcase_animated col-lg-4">
+						<?php $this->show_button(); ?>
+					</div>	
+				</div><!-- .row -->	
+			</div><!-- .container -->	
 		</div>
 		<?php
 	}

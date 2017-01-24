@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php if(get_post_custom_values( 'no-title' )[0] !== "true"): ?>
 		<header class="entry-header">

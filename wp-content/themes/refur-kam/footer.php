@@ -20,8 +20,8 @@
 		<div class="container">
 			<div class="row">
 			<div class="footer-logo col-md-4 col-sm-12 col-xs-12">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="footer-logo-link" rel="home">
-					<?php bloginfo( 'name' ); ?>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="image-logo" rel="home">
+					<img src="<?php echo esc_url( home_url( '/' ) ); ?>/wp-content/uploads/Asset-8.png" alt="KAM Fórum">
 				</a>
 			</div><!-- .footer-logo -->
 			<div class="site-info col-md-8 col-sm-12 col-xs-12">

@@ -47,7 +47,6 @@
                 postHeadlineController.addPostToHeadline(post);
             });
             postHeadlineController.displayPostsHeadline();
-            console.log(model.headlines);
         });
     });
 

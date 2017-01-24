@@ -27,6 +27,7 @@
   <?php wp_head(); ?>
   <link rel="stylesheet"
         href="<?= bloginfo( 'stylesheet_directory' ); ?>/css/kam-forum.css<?= "?ver=$version" ?>" />
+  <link href="https://fonts.googleapis.com/css?family=Raleway&amp;subset=latin-ext" rel="stylesheet">      
 </head>
 
 <body <?php body_class(); ?>>
