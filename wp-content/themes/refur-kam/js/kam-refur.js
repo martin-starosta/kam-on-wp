@@ -11,17 +11,18 @@
         },
 
         displayPostsHeadline: function() {
-            postHeadlineView.init();
+            postHeadlineView.init(model.headlines);
         },
 
     }
 
     var postHeadlineView = {
-        init: function() {
-            $('.header-showcase_btn').before('<div id="animated-headline-holder" class="posts-headline-animated"></div>');
-            var container = $('#animated-headline-holder');
-            container.append('<span id="animated-headline"><div class="loading"></div></span>');
-            this.animateHeadline();
+        init: function(content) {
+            var container = $('.headlines');
+            (content || []).map(function(post) {
+                container.prepend(`<div class="headline-tile">${post.title.rendered}</div>`);
+            });
+            //this.animateHeadline();
         },
 
         animateHeadline: function() {
@@ -42,7 +43,7 @@
     }
 
     $(function() {
-        $.getJSON('/kam-on-wp/wp-json/wp/v2/posts?per_page=5&orderby=date', function(data) {
+        $.getJSON('/kam-on-wp/wp-json/wp/v2/posts?per_page=3&orderby=date', function(data) {
             data.forEach(function(post) {
                 postHeadlineController.addPostToHeadline(post);
             });

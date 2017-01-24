@@ -187,11 +187,13 @@ class refur_custom_header {
 			return true;
 		}
 
-		$this->open_image_wrap();
-		$this->show_image();
-		$this->show_slogan();
-		$this->close_image_wrap();
-
+		if ( ! $this->is_showcase() ) {
+			$this->open_image_wrap();
+			$this->show_image();
+			$this->close_image_wrap();
+		} else {
+			$this->show_slogan();
+		}
 	}
 
 	/**
@@ -239,31 +241,26 @@ class refur_custom_header {
 		$title = refur_get_option( 'header_slogan_title', $this->default_settings['header_slogan_title'] );
 		$text  = refur_get_option( 'header_slogan_text', $this->default_settings['header_slogan_text'] );
 		?>
-		<div class="header-showcase_content">
-			<div class="container">
+		<div class="leadspace-jumbotron" style="background-image: url(<?= get_header_image() ?>); background-size: cover;">
+			<div class="container">	
 				<div class="row">
-					<div class="header-showcase_main col-lg-8">
+					<div class="col-lg-8 col-md-8 col-xs-12 column-left">
 						<?php if ( $title || $text ) : ?>
-						<div class="header-showcase_slogan">
-							<?php if ( $title ) : ?>
-							<div class="header-showcase_title"><?php
-								echo wp_kses( $title, wp_kses_allowed_html( 'post' ) );
-							?></div>
-							<?php endif; ?>
-							<?php if ( $text ) : ?>
-							<div class="header-showcase_text"><?php
-								echo wp_kses( $text, wp_kses_allowed_html( 'post' ) );
-							?></div>
-							<?php endif; ?>
-						</div>
+						<?php if ( $title ) : ?>
+							<h1 class="leadspace-jumbotron_slogan"><?= wp_kses( $title, wp_kses_allowed_html( 'post' ) );?></h1>
 						<?php endif; ?>
-					</div><!-- .header-showcase_main -->
-					<div class="header-showcase_animated col-lg-4">
+						<?php if ( $text ) : ?>
+							<p class="leadspace-jumbotron_text"><?= wp_kses( $text, wp_kses_allowed_html( 'post' ) );?></p>
+						<?php endif; ?>
+					<?php endif; ?>
+					</div><!-- .column-left -->
+					<div class="col-lg-4 col-md-4 col-xs-12 headlines">
 						<?php $this->show_button(); ?>
-					</div>	
-				</div><!-- .row -->	
-			</div><!-- .container -->	
-		</div>
+					</div><!-- .column-left -->	
+				</div><!-- .row -->
+  			</div><!-- .container -->
+		</div><!-- .jumbotron -->
+
 		<?php
 	}
 

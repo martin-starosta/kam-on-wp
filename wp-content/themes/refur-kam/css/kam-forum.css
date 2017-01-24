@@ -52,6 +52,23 @@
 / Overrides
 / -------------------------------------------------- **/
 
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Roboto", sans-serif;
+}
+
+.site-content {
+    padding: 32px 0 32px;
+}
+
 
 /**
  * 1. Avoid the IE 10-11 `min-height` bug.
@@ -71,10 +88,187 @@
     /* 2 */
 }
 
-.header-showcase {
-    max-height: 80vh;
+.leadspace-jumbotron {
+    color: white;
+    min-height: 400px;
+    padding-top: 250px;
+    background-color: #464C51;
+    background-blend-mode: overlay;
 }
 
+@media (min-width: 768px) and (max-width: 1200px) {
+    .leadspace-jumbotron {
+        min-height: 35vh;
+        padding-top: 180px;
+    }
+}
+
+@media (min-width: 1201px) {
+    .leadspace-jumbotron {
+        min-height: 65vh;
+        padding-top: 200px;
+    }
+}
+
+.leadspace-jumbotron_slogan {
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1em;
+}
+
+.leadspace-jumbotron_text {
+    font-size: 24px;
+}
+
+.headlines {
+    display: flex;
+    flex-direction: column;
+}
+
+.headline-tile {
+    border: 1px solid white;
+    font-weight: bold;
+    margin-bottom: 8px;
+    padding: 16px;
+    width: 100%;
+}
+
+
 /** --------------------------------------------------
-/ Home page
+/ Premium
 / -------------------------------------------------- **/
+
+.premium {}
+
+.premium .separator {
+    border-top: 1px dashed #CD241B;
+    border-bottom: 1px dashed #CD241B;
+    margin-bottom: 8pt;
+    text-align: center;
+}
+
+.premium .premium-headline {
+    font-weight: bold;
+}
+
+
+/** --------------------------------------------------
+/ Cards
+/ -------------------------------------------------- **/
+
+.promoted-headline {
+    font-size: 16pt;
+    letter-spacing: 0;
+    font-weight: 350;
+    font-style: normal;
+}
+
+.card {
+    border: 1px solid rgba(70, 76, 81, .15);
+    border-radius: 1px;
+    color: rgb(70, 76, 81);
+    height: 100%;
+    margin-bottom: 16pt;
+    padding: 16pt;
+}
+
+
+/** --------------------------------------------------
+/ Text colors
+/ -------------------------------------------------- **/
+
+.text-red {
+    color: #CD241B;
+}
+
+.text-white,
+.text-white:hover {
+    color: rgb(191, 223, 236);
+}
+
+a.text-white {
+    color: rgb(144, 189, 212);
+    text-decoration: underline;
+}
+
+
+/** --------------------------------------------------
+/ Backgrounds
+/ -------------------------------------------------- **/
+
+.bg-red {
+    background-color: #CD241B;
+}
+
+.bg-grey {
+    background-color: rgba(70, 76, 81, .8);
+}
+
+
+/** --------------------------------------------------
+/ Buttons
+/ source: https://www.sitepoint.com/modern-css-buttons/
+/ -------------------------------------------------- **/
+
+.variation-a,
+.variation-b {
+    /*text-align: center;*/
+}
+
+.suit_and_tie {
+    /* font */
+    color: rgb(117, 163, 209);
+    text-decoration: none;
+    text-transform: none;
+    /* border */
+    border: 2px solid rgb(117, 163, 209);
+    border-radius: 20px;
+    /* transitions */
+    transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    /* other */
+    background-color: white;
+    padding: 8px 16px;
+}
+
+.suit_and_tie:hover {
+    /* update text color and background color */
+    color: white;
+    background-color: rgb(117, 163, 209);
+    border: 2px solid rgb(117, 163, 209);
+    text-decoration: none;
+    /* transitions */
+    transition-duration: .2s;
+    -webkit-transition-duration: .11s;
+    -moz-transition-duration: .2s;
+}
+
+.variation-b .suit_and_tie {
+    /* font */
+    color: white;
+    /* border */
+    border: 2px solid white;
+    /* other */
+    background-color: rgb(117, 163, 209);
+}
+
+.variation-b .suit_and_tie:hover {
+    /* font */
+    color: rgb(117, 163, 209);
+    /* border */
+    border: 2px solid rgb(117, 163, 209);
+    /* other */
+    background-color: white;
+}
+
+button.suit_and_tie {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.search-row {
+    margin-bottom: 16px;
+}
