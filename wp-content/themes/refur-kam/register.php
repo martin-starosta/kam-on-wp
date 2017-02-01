@@ -31,16 +31,16 @@ get_header(); ?>
             V prípade, že tvoja žiadosť bude akceptovaná, obdržíš prihlasovacie meno a heslo na zadanú emailovú adresu.
           </p>
 
-          <p>
-            Z dôvodu zabezpečenia exkluzivity obsahu KAM Fóra akceptujeme len firmné emailové adresy. Ak takouto emailovou
-            adresou nedisponuješ, ale chceš mať prístup k prémiovému obsahu, kontaktuj nás na info@kamforum.sk. Tvoja žiadosť bude
-            osobitne prehodnotená a budeme ťa informovať o udelení alebo neudelení výnimky.
-          </p>
+          <div class="form-group">
+            <label for="username">Užívateľské meno</label>
+            <input type="text" class="form-control" id="username" name="username"
+                   placeholder="Sem môžeš zadať užíateľské meno, pod ktorým budeš vystupovať na fóre.">
+          </div>
 
           <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" name="email"
-                   placeholder="Sem môžeš zadať svoj firemný email.">
+                   placeholder="Sem zadaj svoj email, pomocou ktorého môžeme s tebou komunikovať.">
           </div>
 
           <div class="checkbox">
