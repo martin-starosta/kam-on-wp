@@ -276,3 +276,11 @@ button.suit_and_tie {
 .search-row {
     margin-bottom: 16px;
 }
+
+
+/* Jobs */
+
+.job-tile {
+    border-top: 1px solid #BAC9D9;
+    padding: 8px 0 8px 0;
+}

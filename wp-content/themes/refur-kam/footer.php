@@ -56,7 +56,7 @@
 
 <?php wp_footer(); ?>
 <!--CDN link for  TweenMax-->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 <script src="<?= bloginfo( 'stylesheet_directory' ); ?>/js/kam-refur.js?<?= "?ver=$version" ?>" defer ?>//--- Custom JS Scripts for KAM Forum --></script>
 
 </body>
