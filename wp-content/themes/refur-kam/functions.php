@@ -1,5 +1,4 @@
 <?php
-define('WP_ENV', 'stage');
 /**
  * refur functions and definitions.
  *
@@ -279,6 +278,25 @@ function refur_submit_registration() {
   }
 }
 
+function getTermsList( $taxonomy ) {
+  $terms = get_terms( $taxonomy );
+  usort($terms, "cmp");
+
+  if ( !empty( $terms ) && !is_wp_error( $terms ) ){
+      echo '<ul>';
+      foreach ( $terms as $term ) {
+        echo '<li>' . $term->name . '&nbsp;(' . $term->count . ')' . '</li>';
+      }
+      echo '</ul>';
+  }
+}
+function cmp($a, $b)
+{
+    if ($a->count == $b->count) {
+        return 0;
+    }
+    return ($a->count < $b->count) ? 1 : -1;
+}
 /**
  * Implement the Custom Header feature.
  */

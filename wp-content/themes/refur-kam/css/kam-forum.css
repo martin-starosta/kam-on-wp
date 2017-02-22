@@ -280,6 +280,14 @@ button.suit_and_tie {
 
 /* Jobs */
 
+a.list-group-item:visited {
+    color: rgba(70, 76, 81, .8);
+}
+
+.list-group-item-heading {
+    padding-bottom: 8px;
+}
+
 .job-tile {
     border-top: 1px solid #BAC9D9;
     padding: 8px 0 8px 0;
